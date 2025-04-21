@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "3f6ea80da1cd2cf751252cf7a62fce2e"
+name = "CR-task"
+handle = "cr-task"
+application_url = "https://arbitrary-leadership-nominated-resort.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-04"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://arbitrary-leadership-nominated-resort.trycloudflare.com/auth/callback",
+  "https://arbitrary-leadership-nominated-resort.trycloudflare.com/auth/shopify/callback",
+  "https://arbitrary-leadership-nominated-resort.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
